@@ -1,0 +1,2 @@
+# shoptheme
+wordpress theme
