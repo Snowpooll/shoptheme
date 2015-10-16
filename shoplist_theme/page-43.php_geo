@@ -1,0 +1,52 @@
+<?php get_header(); ?>
+
+
+<ul>
+  <li>経度：<span id="latitude"></span></li>
+  <li>緯度：<span id="longitude"></span></li>
+</ul>
+
+ <div id="map"></div>
+
+<script type="text/javascript">
+
+function init( )
+{
+var mapOptions = {
+// ズームレベル
+//     数字が小さいほど広域、数字が大きいほど詳細な地図になる
+//     最小値は0、最大値は未定義
+zoom: 15,
+// 地図の種類
+//     ROADMAP: 市街地地図
+//     SATELLITE: 航空写真
+//     HYBRID:     航空写真 + 都市名等
+//     TERRAIN:   地形の特徴と植物の分布
+mapTypeId: google.maps.MapTypeId.ROADMAP,
+// マップ中心の緯度と経度
+//     緯度経度取得：http://www.geocoding.jp/
+center: new google.maps.LatLng( 35.691914, 139.733863 )// 市ヶ谷
+};
+// Mapクラスのインスタンスを作成
+var map = new google.maps.Map( document.getElementById( 'map' ), mapOptions ) ;
+
+var marker =getMarker({
+
+ position: new google.maps.LatLng(35.691914, 139.733863),
+
+ map: map
+   } );
+
+}
+
+
+function getMarker(option)
+{
+var marker = new google.maps.Marker(option);
+return marker;
+}
+
+google.maps.event.addDomListener( window, 'load', init ) ;
+
+</script>
+<?php get_footer(); ?>
