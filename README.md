@@ -23,3 +23,6 @@ Simple Map
 
 Meta Slider
 写真スライダー作成
+
+Custom Field Template
+カスタムフィールド作成
