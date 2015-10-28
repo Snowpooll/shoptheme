@@ -15,7 +15,7 @@ href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div data-role="page" data-title="jQuery Mobile">
+<div data-role="page" data-title="駅ちかランチ">
 <div data-role="header">
  <h1><?php bloginfo('name'); ?></h1>
 </div>
